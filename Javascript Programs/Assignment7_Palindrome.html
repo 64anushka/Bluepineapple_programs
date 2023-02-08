@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <script>
+            function palindrome(str)
+            {
+                str=str.toLowerCase();
+                const ReverseString = str => [...str].reverse().join('');
+                let strrev=ReverseString(str);
+                if(!str.localeCompare(strrev))
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            let str = prompt("Enter string");
+            let result=palindrome(str);
+            if(Math.trunc(result))
+            {
+                alert("Palindrome");
+            }
+            else
+            {
+                alert("Not Palindrome");
+            }
+        </script>
+    </body>
+</html>
